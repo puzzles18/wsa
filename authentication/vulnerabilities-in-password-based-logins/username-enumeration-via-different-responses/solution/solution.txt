@@ -1,0 +1,23 @@
+to solve this you must first type in random login and password
+and then intercept this POST request or look it up in the history
+
+then forward this request to burp intruder via right click
+
+in burp intruder select this random password
+which is posed in html text username=random_username
+then in payload configuration paste payloads you copied from text list 
+given in lab
+
+and now you enumarete the username which means you check if any of
+given usernames exist
+check for response length, one will vary because it will say
+"incorrect password" instead of "invalid user" or sth like that
+now u got the username
+
+then in intruder http request you type in this username and now select
+the password to add a payload
+add copied passwords in list format to payload
+check for status code, one will vary and instead of http 200 will be 302
+
+check: how to make a note of a found username and/or password in burp
+rn save in text editor   
